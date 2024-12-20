@@ -38,17 +38,13 @@ void mySPI_init(void){
 
 void MySPI_Start(void)
 {
-	write_CS(0);				//拉低SS，开始时序
+	write_CS(0);				//pull down SS
 }
 
-/**
-  * 函    数：SPI终止
-  * 参    数：无
-  * 返 回 值：无
-  */
+
 void MySPI_Stop(void)
 {
-	write_CS(1);				//拉高SS，终止时序
+	write_CS(1);				//pull up SS
 }
 
 
